@@ -1,0 +1,21 @@
+[package]
+name = "git-metadata-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# Exclude from parent workspace
+[workspace]
+
+# Simulate the feature (manually set BUILD_PARAM_* env vars for now)
+# In the future, Cargo will read these and set the env vars automatically:
+#
+# cargo-features = ["build-script-parameters"]
+#
+# [package.build.parameters]
+# include_git_hash = true
+# include_build_time = true
+# include_branch = false
+
+[build-dependencies]
+build-params = { path = "../.." }

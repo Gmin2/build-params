@@ -1,0 +1,12 @@
+[package]
+name = "build-params-test-lib"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+publish = false
+
+[build-dependencies]
+build-params = { path = ".." }
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(did_run_build_script)'] }

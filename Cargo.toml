@@ -1,0 +1,18 @@
+[package]
+name = "build-params"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+publish = false
+
+description = "Strongly typed interface for reading build script parameters from Cargo.toml"
+repository = "https://github.com/Gmin2/build-params"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+
+[features]
+unstable = []
+
+[workspace]
+members = ["test-lib"]
